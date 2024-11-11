@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskTracker.MainPage"
+             xmlns:dx="http://schemas.devexpress.com/maui">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout Grid.Row="0" Padding="10">
+            <Image Source="taskss.png"
+                   BackgroundColor="Transparent"
+                   WidthRequest="100"
+                   Margin="5"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start" />
+
+            <BoxView HeightRequest="3"
+                     WidthRequest="120"
+                     HorizontalOptions="Center"
+                     Color="#4f9cc9" />
+
+            <Label Text="Your tasks:"
+                   FontAttributes="Bold"
+                   FontSize="22"
+                   Margin="5" />
+            
+            <BoxView HeightRequest="3"
+                     HorizontalOptions="Fill"
+                     Color="#4f9cc9" 
+                     Margin="-1"/>
+            
+            <CollectionView x:Name="TasksCollectionView"
+                            HeightRequest="490"
+                            VerticalScrollBarVisibility="Always">
+                
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+                            <SwipeView.RightItems >
+                                <SwipeItems>
+                                    <SwipeItem x:Name="DeleteSwipe"
+                                               IconImageSource="trashcan.png"
+                                               BackgroundColor="Red"
+                                               Invoked="OnDeleteSwipeItemInvoked" />
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <Grid Padding="0,5">
+                                <Frame BorderColor="#949494"
+                                       BackgroundColor="White">
+                                    <Label Text="{Binding Name}" 
+                                           FontSize="22" >
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnTaskTapped" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Frame>
+                            </Grid>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+
+        </VerticalStackLayout>
+
+        
+        <Button x:Name="addTaskButton"
+                Text="Add new Task"
+                FontAttributes="Bold"
+                FontSize="18"
+                Grid.Row="2"
+                VerticalOptions="End"
+                HorizontalOptions="End"
+                WidthRequest="150"
+                HeightRequest="50"
+                Margin="10"
+                Padding="10"/>
+
+        <ContentView x:Name="PopupMenu"
+                     IsVisible="False"
+                     BackgroundColor="White"
+                     AbsoluteLayout.LayoutBounds="0.5, 0.5"
+                     AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Frame Padding="10"
+                   BackgroundColor="#7ebaf2"
+                   CornerRadius="25">
+                <StackLayout>
+                    <Button x:Name="Cancel"
+                            Text="Cancel"
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            HorizontalOptions="Start"
+                            WidthRequest="100"
+                            HeightRequest="40"
+                            Margin="270,0,0,10" />
+
+                    <Label Text="Adding new Task:"
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="24" />
+
+                    <Label Text="Name:*"
+                           Margin="20"
+                           FontAttributes="Italic"
+                           TextColor="Black"
+                           FontSize="18" />
+
+                    <Frame CornerRadius="10"
+                           BorderColor="LightGray"
+                           BackgroundColor="White"
+                           HasShadow="True"
+                           Padding="5">
+                        <Entry x:Name="NamePlaceHolder"
+                               Placeholder="Type a Task name"
+                               FontSize="16"
+                               TextColor="Black"
+                               PlaceholderColor="Gray"
+                               Margin="1" />
+                    </Frame>
+
+                    <Label Text="Description:"
+                           Margin="20"
+                           FontAttributes="Italic"
+                           TextColor="Black"
+                           FontSize="18" />
+
+                    <Frame CornerRadius="10"
+                           BorderColor="LightGray"
+                           BackgroundColor="White"
+                           HasShadow="True"
+                           Padding="5">
+                        <Editor x:Name="DescriptionPlaceholder"
+                               Placeholder="Type a Task description"
+                               FontSize="16"
+                               TextColor="Black"
+                               AutoSize="TextChanges"
+                               HeightRequest="100"
+                               PlaceholderColor="Gray"
+                               Margin="1" />
+                    </Frame>
+
+                    <Label x:Name="difficultyHeader"
+                           Text="Choose task difficulty:*"
+                           Margin="20"
+                           FontAttributes="Italic"
+                           TextColor="Black"
+                           FontSize="18" />
+
+                    <Frame CornerRadius="10"
+                           BorderColor="LightGray"
+                           BackgroundColor="White"
+                           HasShadow="True"
+                           Padding="5">
+                        <Picker x:Name="difficultyPicker"
+                                Title="DIFFICULTY">
+                            <Picker.Items>
+                                <x:String>Easy</x:String>
+                                <x:String>Medium</x:String>
+                                <x:String>Hard</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Frame>
+
+                    <Label x:Name="termHeader"
+                           Text="Choose task term:*"
+                           Margin="20"
+                           FontAttributes="Italic"
+                           TextColor="Black"
+                           FontSize="18" />
+
+                    <Frame CornerRadius="10"
+                           BorderColor="LightGray"
+                           BackgroundColor="White"
+                           HasShadow="True"
+                           Padding="5">
+                        <Picker x:Name="termPicker"
+                                Title="TERM">
+                            <Picker.Items>
+                                <x:String>Urgently</x:String>
+                                <x:String>Middle</x:String>
+                                <x:String>Not urgently</x:String>
+                                <x:String>Everyday</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Frame>
+
+                    <Button x:Name="ConfirmTask"
+                            Text="Add new Task"
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            HorizontalOptions="End"
+                            WidthRequest="150"
+                            HeightRequest="50"
+                            Margin="0,20,0,0" />
+                </StackLayout>
+            </Frame>
+        </ContentView>
+    </Grid>
+</ContentPage>

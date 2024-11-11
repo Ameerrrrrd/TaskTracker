@@ -1,0 +1,1 @@
+D:\.net maui\TaskTracker\TaskTracker.csproj;x64

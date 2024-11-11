@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskTracker.AddonInfo"
+             Title="AddonInfo">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+            Text="Task"
+            FontAttributes="Bold"
+            FontSize="26"
+            TextColor="Black"
+            Padding="10"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <BoxView HeightRequest="3"
+                     HorizontalOptions="Fill"
+                     Color="#4f9cc9" 
+                     Margin="-7"/>
+                <!--<ImageButton x:Name="editChanges"
+                     Source="edit.png" 
+                     WidthRequest="50" 
+                     HeightRequest="50" 
+                     BackgroundColor="Transparent"
+                     Margin="0,0,-280,0"
+                    />-->
+            <Label 
+            Text="Name:"
+            FontAttributes="Italic"
+            FontSize="22"
+            TextColor="Black"
+            Margin="10"
+            Padding="10" />
+
+            <Frame CornerRadius="10"
+               BorderColor="#949494"
+               BackgroundColor="#f2f5f3"
+               HasShadow="True"
+               Padding="15"
+               Margin="5,-10,5,0"
+               VerticalOptions="Start"
+               WidthRequest="350"  >
+
+                <Label x:Name="AddonName" Text="" FontAttributes="Bold" FontSize="18"/>
+            </Frame>
+
+            <Label 
+            Text="Description:"
+            FontAttributes="Italic"
+            FontSize="22"
+            TextColor="Black"
+            Margin="10"
+            Padding="10"/>
+
+            <Frame CornerRadius="10"
+               BorderColor="#949494"
+               BackgroundColor="#f2f5f3"
+               Padding="15"
+               Margin="5,-10,5,0"
+               VerticalOptions="Start"
+               WidthRequest="350"                
+                  >
+                <Label x:Name="AddonDescription" Text="" FontAttributes="Bold" FontSize="18" LineBreakMode="WordWrap" />
+            </Frame>
+
+            <Label 
+            Text="Difficulty:"
+            FontAttributes="Italic"
+            FontSize="22"
+            TextColor="Black"
+            Margin="10"
+            Padding="10"/>
+
+            <Frame CornerRadius="10"
+               BorderColor="#949494"
+               BackgroundColor="#f2f5f3"
+               HasShadow="True"
+               Padding="15"
+               Margin="5,-10,5,0"
+               WidthRequest="350"  >
+                <Label x:Name="AddonDifficulty" Text="" FontAttributes="Bold" FontSize="18"/>
+            </Frame>
+
+            <Label 
+            Text="Term:"
+            FontAttributes="Italic"
+            FontSize="22"
+            TextColor="Black"
+            Margin="10"
+            Padding="10"/>
+
+            <Frame CornerRadius="10"
+               BorderColor="#949494"
+               BackgroundColor="#f2f5f3"
+               HasShadow="True"
+               Padding="15"
+               Margin="5,-10,5,0"
+               WidthRequest="350"  >
+                <Label x:Name="AddonTerm" Text="" FontAttributes="Bold" FontSize="18"/>
+            </Frame>
+            
+            <Label/>
+            <Label/>
+        </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
