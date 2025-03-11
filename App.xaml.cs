@@ -2,6 +2,7 @@
 
 public partial class App : Application
 {
+
 	public static TaskDataBase DataBase { get; private set; }
 	public App()
 	{

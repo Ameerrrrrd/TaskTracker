@@ -1,202 +1,447 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TaskTracker"
              x:Class="TaskTracker.MainPage"
              xmlns:dx="http://schemas.devexpress.com/maui">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:TruncateConverter x:Key="TruncateConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.BackgroundColor>
+        <AppThemeBinding Light="WhiteSmoke" Dark="#212121" />
+    </ContentPage.BackgroundColor>
 
     <Grid>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-
-        <VerticalStackLayout Grid.Row="0" Padding="10">
-            <Image Source="taskss.png"
-                   BackgroundColor="Transparent"
-                   WidthRequest="100"
-                   Margin="5"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Start" />
-
-            <BoxView HeightRequest="3"
-                     WidthRequest="120"
-                     HorizontalOptions="Center"
-                     Color="#4f9cc9" />
-
-            <Label Text="Your tasks:"
-                   FontAttributes="Bold"
-                   FontSize="22"
-                   Margin="5" />
-            
-            <BoxView HeightRequest="3"
-                     HorizontalOptions="Fill"
-                     Color="#4f9cc9" 
-                     Margin="-1"/>
-            
-            <CollectionView x:Name="TasksCollectionView"
-                            HeightRequest="490"
-                            VerticalScrollBarVisibility="Always">
-                
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <SwipeView>
-                            <SwipeView.RightItems >
-                                <SwipeItems>
-                                    <SwipeItem x:Name="DeleteSwipe"
-                                               IconImageSource="trashcan.png"
-                                               BackgroundColor="Red"
-                                               Invoked="OnDeleteSwipeItemInvoked" />
-                                </SwipeItems>
-                            </SwipeView.RightItems>
-                            <Grid Padding="0,5">
-                                <Frame BorderColor="#949494"
-                                       BackgroundColor="White">
-                                    <Label Text="{Binding Name}" 
-                                           FontSize="22" >
-                                        <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="OnTaskTapped" />
-                                        </Label.GestureRecognizers>
-                                    </Label>
-                                </Frame>
-                            </Grid>
-                        </SwipeView>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-
-
-
-        </VerticalStackLayout>
-
         
+        <AbsoluteLayout>
+            <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All">                
+            <VerticalStackLayout Grid.Row="0" Padding="10">
+
+                <Image BackgroundColor="Transparent"
+                       WidthRequest="100"
+                       Margin="-5"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start" >
+
+                    <Image.Source>
+                        <AppThemeBinding Light="taskss.png" Dark="tasksfordark.png"/>
+                    </Image.Source>
+
+                </Image>
+
+                <BoxView HeightRequest="3"
+                         WidthRequest="120"
+                         HorizontalOptions="Center"
+                         Margin="0,10,0,0">
+
+                    <BoxView.Color>
+                            <AppThemeBinding Light="#86d195" Dark="#BB86FC"/>
+                    </BoxView.Color>
+
+                </BoxView>
+
+                <Label Text="Your tasks:"
+                       FontAttributes="Bold"
+                       FontSize="22"
+                       Margin="5" >
+
+                    <Label.TextColor>
+                        <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                    </Label.TextColor>
+
+                </Label>
+
+                <BoxView HeightRequest="3"
+                         HorizontalOptions="Fill"
+                         Margin="-10,-5,-10,10">
+
+                    <BoxView.Color>
+                            <AppThemeBinding Light="#86d195" Dark="#BB86FC"/>
+                    </BoxView.Color>
+
+                </BoxView>
+
+
+                <CollectionView x:Name="TasksCollectionView"
+                                VerticalOptions="FillAndExpand">
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                                <SwipeView>
+                                    <SwipeView.LeftItems >
+                                        <SwipeItems>
+                                            <SwipeItemView x:Name="EditSwipe"
+                                                           HeightRequest="80"
+                                                           BackgroundColor="Transparent"
+                                                           Padding="0"
+                                                           Invoked="OnEditSwipeInvoked">
+
+                                                <Frame CornerRadius="7"
+                                                       HeightRequest="65"
+                                                       Margin="0,0,0,-4">
+
+                                                    <Image Source="change_inf.png"
+                                                           WidthRequest="50"
+                                                           HeightRequest="50"
+                                                           HorizontalOptions="Center"
+                                                           VerticalOptions="Center"/>
+
+                                                    <Frame.BackgroundColor>
+                                                        <AppThemeBinding Light="#86b3fc" Dark="#86b3fc"/>
+                                                    </Frame.BackgroundColor>
+                                                    
+                                                </Frame>
+                                                
+                                            </SwipeItemView>
+                                        </SwipeItems>
+                                    </SwipeView.LeftItems>
+                                
+                                    <SwipeView.RightItems >
+                                    <SwipeItems>
+                                        <SwipeItemView x:Name="DeleteSwipe"
+                                                       HeightRequest="80"
+                                                       BackgroundColor="Transparent"
+                                                       Padding="0"
+                                                       Invoked="OnDeleteSwipeItemInvoked">
+
+                                            <Frame CornerRadius="7"
+                                                   HeightRequest="65"
+                                                   WidthRequest="90"
+                                                   Margin="0,0,0,-4">
+
+                                                <Image Source="trashcan.png"
+                                                       WidthRequest="55"
+                                                       HeightRequest="55"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"/>
+                                                
+                                                    <Frame.BackgroundColor>
+                                                        <AppThemeBinding Light="Red" Dark="#ad1313"/>
+                                                    </Frame.BackgroundColor>
+                                                
+                                            </Frame>
+                                            
+                                        </SwipeItemView>
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+
+                                <Grid Padding="2,6">
+                                    <Frame Padding="10,10,50,10"
+                                           Margin="0,0,0,-4">
+
+                                        <Frame.BackgroundColor>
+                                                <AppThemeBinding Light="#f0faf2" Dark="#4f3b5e"/>
+                                        </Frame.BackgroundColor>
+
+                                        <Frame.BorderColor>
+                                                <AppThemeBinding Light="#5e5e5e" Dark="#291f30"/>
+                                        </Frame.BorderColor>
+                                            <VerticalStackLayout>
+                                                <Label Text="{Binding Name}" 
+                                                       FontSize="22"
+                                                       Padding="0,0,0,0">
+
+                                            <Label.TextColor>
+                                                <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                                            </Label.TextColor>
+
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="OnTaskTapped" />
+                                            </Label.GestureRecognizers>
+
+                                        </Label>
+
+                                                <Label Text="{Binding Description, Converter={StaticResource TruncateConverter}}"
+                                                       FontSize="16"
+                                                       TextColor="Gray" />
+                                                
+                                            </VerticalStackLayout>
+
+                                        </Frame>
+                                </Grid>
+                            </SwipeView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+
         <Button x:Name="addTaskButton"
-                Text="Add new Task"
                 FontAttributes="Bold"
-                FontSize="18"
-                Grid.Row="2"
+                Text="+"
+                FontSize="45"              
                 VerticalOptions="End"
                 HorizontalOptions="End"
-                WidthRequest="150"
-                HeightRequest="50"
-                Margin="10"
-                Padding="10"/>
+                HeightRequest="75"
+                WidthRequest="75"
+                Margin="0,0,20,50"
+                Padding="0, 0, 0, 0"
+                CornerRadius="40"
+                AbsoluteLayout.LayoutBounds="1,1,-2,-2"
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+
+                <Button.Shadow>
+                    <Shadow  Brush="#003d7a"
+                             Offset="0,5"
+                             Radius="10"
+                             Opacity="0.2"/>
+                </Button.Shadow>
+            
+            <Button.BackgroundColor>
+                    <AppThemeBinding Light="#86d195" Dark="#BB86FC"/>
+            </Button.BackgroundColor>
+
+            <Button.TextColor>
+                <AppThemeBinding Light="White" Dark="#F5F5F5"/>
+            </Button.TextColor>
+
+        </Button>
+        </AbsoluteLayout>
 
         <ContentView x:Name="PopupMenu"
                      IsVisible="False"
-                     BackgroundColor="White"
                      AbsoluteLayout.LayoutBounds="0.5, 0.5"
                      AbsoluteLayout.LayoutFlags="PositionProportional">
+
             <Frame Padding="10"
-                   BackgroundColor="#7ebaf2"
-                   CornerRadius="25">
+                   CornerRadius="5">
+
+                <Frame.BackgroundColor>
+                    <AppThemeBinding Light="WhiteSmoke" Dark="#212121" />
+                </Frame.BackgroundColor>
+                
                 <StackLayout>
                     <Button x:Name="Cancel"
-                            Text="Cancel"
+                            Text="←"
                             FontAttributes="Bold"
-                            FontSize="18"
+                            FontSize="35"
                             HorizontalOptions="Start"
-                            WidthRequest="100"
-                            HeightRequest="40"
-                            Margin="270,0,0,10" />
+                            VerticalOptions="Center"
+                            WidthRequest="70"
+                            HeightRequest="50"
+                            Padding="0, 0, 0, 0"
+                            CornerRadius="80">
+                        
+                        <Button.BackgroundColor>
+                            <AppThemeBinding Light="#86d195" Dark="#BB86FC"/>
+                        </Button.BackgroundColor>
+
+                        <Button.TextColor>
+                            <AppThemeBinding Light="White" Dark="#F5F5F5"/>
+                        </Button.TextColor>
+
+                    </Button>
 
                     <Label Text="Adding new Task:"
                            FontAttributes="Bold"
-                           TextColor="Black"
-                           FontSize="24" />
+                           FontSize="24" 
+                           HorizontalOptions="Center">
+
+                        <Label.TextColor>
+                            <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                        </Label.TextColor>
+
+                    </Label>
+
+                    <BoxView HeightRequest="3"
+                             HorizontalOptions="FillAndExpand"
+                             Margin="-10,2,-10,-10">
+
+                        <BoxView.Color>
+                            <AppThemeBinding Light="#86d195" Dark="#BB86FC"/>
+                        </BoxView.Color>
+                        
+                    </BoxView>
 
                     <Label Text="Name:*"
-                           Margin="20"
+                           Margin="20, 30, 0, 10"
                            FontAttributes="Italic"
-                           TextColor="Black"
-                           FontSize="18" />
+                           FontSize="18">
+
+                        <Label.TextColor>
+                            <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                        </Label.TextColor>
+
+                    </Label>
 
                     <Frame CornerRadius="10"
-                           BorderColor="LightGray"
-                           BackgroundColor="White"
                            HasShadow="True"
                            Padding="5">
+                        
+                        <Frame.BackgroundColor>
+                            <AppThemeBinding Light="#f0faf2" Dark="#4f3b5e"/>
+                        </Frame.BackgroundColor>
+
+                        <Frame.BorderColor>
+                            <AppThemeBinding Light="#5e5e5e" Dark="#291f30"/>
+                        </Frame.BorderColor>
+
                         <Entry x:Name="NamePlaceHolder"
                                Placeholder="Type a Task name"
                                FontSize="16"
-                               TextColor="Black"
-                               PlaceholderColor="Gray"
-                               Margin="1" />
+                               Margin="1"
+                               MaxLength="25">
+
+                            <Entry.PlaceholderColor>
+                                <AppThemeBinding Light="#5e5e5e" Dark="#9E9E9E"/>
+                            </Entry.PlaceholderColor>
+                            
+                            <Entry.TextColor>
+                                <AppThemeBinding Light="Black" Dark="#F5F5F5"/>
+                            </Entry.TextColor>    
+                        </Entry>
+                        
                     </Frame>
 
                     <Label Text="Description:"
-                           Margin="20"
+                           Margin="20, 30, 0, 10"
                            FontAttributes="Italic"
-                           TextColor="Black"
-                           FontSize="18" />
+                           FontSize="18">
+
+                        <Label.TextColor>
+                            <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                        </Label.TextColor>
+                    </Label>
 
                     <Frame CornerRadius="10"
-                           BorderColor="LightGray"
-                           BackgroundColor="White"
                            HasShadow="True"
                            Padding="5">
+
+                        <Frame.BackgroundColor>
+                            <AppThemeBinding Light="#f0faf2" Dark="#4f3b5e"/>
+                        </Frame.BackgroundColor>
+
+                        <Frame.BorderColor>
+                            <AppThemeBinding Light="#5e5e5e" Dark="#291f30"/>
+                        </Frame.BorderColor>
+
                         <Editor x:Name="DescriptionPlaceholder"
-                               Placeholder="Type a Task description"
-                               FontSize="16"
-                               TextColor="Black"
-                               AutoSize="TextChanges"
-                               HeightRequest="100"
-                               PlaceholderColor="Gray"
-                               Margin="1" />
+                                Placeholder="Type a Task description"
+                                FontSize="16"
+                                AutoSize="TextChanges"
+                                HeightRequest="130"
+                                Margin="1" >
+
+
+                            <Editor.PlaceholderColor>
+                                <AppThemeBinding Light="#5e5e5e" Dark="#9E9E9E"/>
+                            </Editor.PlaceholderColor>
+                            
+                            <Editor.TextColor>
+                                <AppThemeBinding Light="Black" Dark="#F5F5F5"/>
+                            </Editor.TextColor>
+                        </Editor>
                     </Frame>
 
                     <Label x:Name="difficultyHeader"
-                           Text="Choose task difficulty:*"
-                           Margin="20"
+                           Text="Choose task difficulty:"
+                           Margin="20, 30, 0, 10"
                            FontAttributes="Italic"
-                           TextColor="Black"
-                           FontSize="18" />
+                           FontSize="18">
+
+                        <Label.TextColor>
+                            <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                        </Label.TextColor>
+                        
+                    </Label>
 
                     <Frame CornerRadius="10"
-                           BorderColor="LightGray"
-                           BackgroundColor="White"
                            HasShadow="True"
                            Padding="5">
+
+                        <Frame.BackgroundColor>
+                            <AppThemeBinding Light="#f0faf2" Dark="#4f3b5e"/>
+                        </Frame.BackgroundColor>
+
+                        <Frame.BorderColor>
+                            <AppThemeBinding Light="#5e5e5e" Dark="#291f30"/>
+                        </Frame.BorderColor>
+
                         <Picker x:Name="difficultyPicker"
                                 Title="DIFFICULTY">
+                            <Picker.TitleColor>
+                                <AppThemeBinding Light="#5e5e5e" Dark="#9E9E9E"/>
+                            </Picker.TitleColor>
+
                             <Picker.Items>
                                 <x:String>Easy</x:String>
                                 <x:String>Medium</x:String>
                                 <x:String>Hard</x:String>
+                                <x:String>Very Hard</x:String>
+                                <x:String>Impossible</x:String>
                             </Picker.Items>
+
                         </Picker>
                     </Frame>
 
                     <Label x:Name="termHeader"
-                           Text="Choose task term:*"
-                           Margin="20"
+                           Text="Choose task term:"
+                           Margin="20, 30, 0, 10"
                            FontAttributes="Italic"
-                           TextColor="Black"
-                           FontSize="18" />
+                           FontSize="18">
+
+                        <Label.TextColor>
+                            <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                        </Label.TextColor>
+                    </Label>
 
                     <Frame CornerRadius="10"
-                           BorderColor="LightGray"
-                           BackgroundColor="White"
                            HasShadow="True"
                            Padding="5">
+
+                        <Frame.BackgroundColor>
+                            <AppThemeBinding Light="#f0faf2" Dark="#4f3b5e"/>
+                        </Frame.BackgroundColor>
+
+                        <Frame.BorderColor>
+                            <AppThemeBinding Light="#5e5e5e" Dark="#291f30"/>
+                        </Frame.BorderColor>
+
                         <Picker x:Name="termPicker"
                                 Title="TERM">
+
+                            <Picker.TitleColor>
+                                <AppThemeBinding Light="#5e5e5e" Dark="#9E9E9E"/>
+                            </Picker.TitleColor>
+                            
                             <Picker.Items>
                                 <x:String>Urgently</x:String>
                                 <x:String>Middle</x:String>
                                 <x:String>Not urgently</x:String>
                                 <x:String>Everyday</x:String>
                             </Picker.Items>
+
                         </Picker>
                     </Frame>
 
                     <Button x:Name="ConfirmTask"
-                            Text="Add new Task"
+                            Text="Add"
                             FontAttributes="Bold"
                             FontSize="18"
                             HorizontalOptions="End"
-                            WidthRequest="150"
+                            WidthRequest="100"
                             HeightRequest="50"
-                            Margin="0,20,0,0" />
+                            Margin="0,20,0,0"
+                            CornerRadius="80">
+
+                        <Button.BackgroundColor>
+                            <AppThemeBinding Light="#86d195" Dark="#BB86FC"/>
+                        </Button.BackgroundColor>
+                        <Button.TextColor>
+                            <AppThemeBinding Light="White" Dark="#F5F5F5"/>
+                        </Button.TextColor>
+
+                    </Button>
                 </StackLayout>
             </Frame>
         </ContentView>

@@ -1,0 +1,240 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|c:\\users\\desktop\\saved games\\desktop\\tasktracker\\addoninfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|solutionrelative:addoninfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|c:\\users\\desktop\\saved games\\desktop\\tasktracker\\addoninfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|solutionrelative:addoninfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|c:\\users\\desktop\\saved games\\desktop\\tasktracker\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|c:\\users\\desktop\\saved games\\desktop\\tasktracker\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|c:\\users\\desktop\\saved games\\desktop\\tasktracker\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|solutionrelative:appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|c:\\users\\desktop\\saved games\\desktop\\tasktracker\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|c:\\users\\desktop\\saved games\\desktop\\tasktracker\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|c:\\users\\desktop\\saved games\\desktop\\tasktracker\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|c:\\users\\desktop\\saved games\\desktop\\tasktracker\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|c:\\users\\desktop\\saved games\\desktop\\tasktracker\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|solutionrelative:taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|c:\\users\\desktop\\saved games\\desktop\\tasktracker\\truncateconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|solutionrelative:truncateconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|c:\\users\\desktop\\saved games\\desktop\\tasktracker\\tasktracker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|solutionrelative:tasktracker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|c:\\users\\desktop\\saved games\\desktop\\tasktracker\\platforms\\android\\resources\\values\\colors.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{1E8C860D-26B2-4D3D-B198-FBFB059CB874}|TaskTracker.csproj|solutionrelative:platforms\\android\\resources\\values\\colors.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 278,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddonInfo.xaml",
+              "DocumentMoniker": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\AddonInfo.xaml",
+              "RelativeDocumentMoniker": "AddonInfo.xaml",
+              "ToolTip": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\AddonInfo.xaml",
+              "RelativeToolTip": "AddonInfo.xaml",
+              "ViewState": "AgIAACcBAAAAAAAAAAAAwEsBAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-06T19:42:08.307Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-11T21:23:21.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddonInfo.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\AddonInfo.xaml.cs",
+              "RelativeDocumentMoniker": "AddonInfo.xaml.cs",
+              "ToolTip": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\AddonInfo.xaml.cs",
+              "RelativeToolTip": "AddonInfo.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T14:47:49.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\AppShell.xaml.cs",
+              "RelativeToolTip": "AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T21:23:16.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-11T21:23:03.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiProgram.cs",
+              "ToolTip": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\MauiProgram.cs",
+              "RelativeToolTip": "MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T21:16:16.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\MainPage.xaml.cs",
+              "RelativeToolTip": "MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T16:04:15.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MainPage.xaml",
+              "ToolTip": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\MainPage.xaml",
+              "RelativeToolTip": "MainPage.xaml",
+              "ViewState": "AgIAAKQBAAAAAAAAAAAAAH0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-06T14:49:39.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T19:28:43.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TruncateConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\TruncateConverter.cs",
+              "RelativeDocumentMoniker": "TruncateConverter.cs",
+              "ToolTip": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\TruncateConverter.cs",
+              "RelativeToolTip": "TruncateConverter.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T22:39:58.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TaskTracker.csproj",
+              "DocumentMoniker": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\TaskTracker.csproj",
+              "RelativeDocumentMoniker": "TaskTracker.csproj",
+              "ToolTip": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\TaskTracker.csproj",
+              "RelativeToolTip": "TaskTracker.csproj",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-06T23:54:47.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TaskModel.cs",
+              "DocumentMoniker": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\TaskModel.cs",
+              "RelativeDocumentMoniker": "TaskModel.cs",
+              "ToolTip": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\TaskModel.cs",
+              "RelativeToolTip": "TaskModel.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAUwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T19:41:37.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "colors.xml",
+              "DocumentMoniker": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\Platforms\\Android\\Resources\\values\\colors.xml",
+              "RelativeDocumentMoniker": "Platforms\\Android\\Resources\\values\\colors.xml",
+              "ToolTip": "C:\\Users\\Desktop\\Saved Games\\Desktop\\TaskTracker\\Platforms\\Android\\Resources\\values\\colors.xml",
+              "RelativeToolTip": "Platforms\\Android\\Resources\\values\\colors.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-01-31T16:04:15.77Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

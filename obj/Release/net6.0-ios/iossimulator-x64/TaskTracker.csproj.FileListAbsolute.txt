@@ -206,13 +206,10 @@ D:\.net maui\TaskTracker\bin\Release\net6.0-ios\iossimulator-x64\libicui18n.a
 D:\.net maui\TaskTracker\bin\Release\net6.0-ios\iossimulator-x64\libicuuc.a
 D:\.net maui\TaskTracker\bin\Release\net6.0-ios\iossimulator-x64\libmono-component-debugger-static.a
 D:\.net maui\TaskTracker\bin\Release\net6.0-ios\iossimulator-x64\libmono-component-debugger-stub-static.a
-D:\.net maui\TaskTracker\bin\Release\net6.0-ios\iossimulator-x64\libmono-component-debugger.dylib
 D:\.net maui\TaskTracker\bin\Release\net6.0-ios\iossimulator-x64\libmono-component-diagnostics_tracing-static.a
 D:\.net maui\TaskTracker\bin\Release\net6.0-ios\iossimulator-x64\libmono-component-diagnostics_tracing-stub-static.a
-D:\.net maui\TaskTracker\bin\Release\net6.0-ios\iossimulator-x64\libmono-component-diagnostics_tracing.dylib
 D:\.net maui\TaskTracker\bin\Release\net6.0-ios\iossimulator-x64\libmono-component-hot_reload-static.a
 D:\.net maui\TaskTracker\bin\Release\net6.0-ios\iossimulator-x64\libmono-component-hot_reload-stub-static.a
-D:\.net maui\TaskTracker\bin\Release\net6.0-ios\iossimulator-x64\libmono-component-hot_reload.dylib
 D:\.net maui\TaskTracker\bin\Release\net6.0-ios\iossimulator-x64\libmonosgen-2.0.a
 D:\.net maui\TaskTracker\bin\Release\net6.0-ios\iossimulator-x64\libmonosgen-2.0.dylib
 D:\.net maui\TaskTracker\bin\Release\net6.0-ios\iossimulator-x64\Microsoft.iOS.registrar.a
@@ -272,3 +269,5 @@ D:\.net maui\TaskTracker\obj\Release\net6.0-ios\iossimulator-x64\refint\TaskTrac
 D:\.net maui\TaskTracker\obj\Release\net6.0-ios\iossimulator-x64\TaskTracker.pdb
 D:\.net maui\TaskTracker\obj\Release\net6.0-ios\iossimulator-x64\TaskTracker.genruntimeconfig.cache
 D:\.net maui\TaskTracker\obj\Release\net6.0-ios\iossimulator-x64\ref\TaskTracker.dll
+D:\.net maui\TaskTracker\obj\Release\net6.0-ios\iossimulator-x64\resizetizer\r\Resources\edit.png
+D:\.net maui\TaskTracker\obj\Release\net6.0-ios\iossimulator-x64\resizetizer\r\Resources\trashcan.png

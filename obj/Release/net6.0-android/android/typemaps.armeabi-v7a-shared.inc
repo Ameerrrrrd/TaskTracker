@@ -107,63 +107,63 @@ map_aname.20:
 
 	.type	map_aname.21, %object
 map_aname.21:
-	.asciz	"Xamarin.AndroidX.SwipeRefreshLayout"
-	.size	map_aname.21, 36
+	.asciz	"TaskTracker"
+	.size	map_aname.21, 12
 
 	.type	map_aname.22, %object
 map_aname.22:
-	.asciz	"Xamarin.AndroidX.CardView"
-	.size	map_aname.22, 26
+	.asciz	"Xamarin.AndroidX.SwipeRefreshLayout"
+	.size	map_aname.22, 36
 
 	.type	map_aname.23, %object
 map_aname.23:
-	.asciz	"Microsoft.Maui.Graphics"
-	.size	map_aname.23, 24
+	.asciz	"Xamarin.AndroidX.CardView"
+	.size	map_aname.23, 26
 
 	.type	map_aname.24, %object
 map_aname.24:
-	.asciz	"Xamarin.AndroidX.CustomView"
-	.size	map_aname.24, 28
+	.asciz	"Microsoft.Maui.Graphics"
+	.size	map_aname.24, 24
 
 	.type	map_aname.25, %object
 map_aname.25:
-	.asciz	"Xamarin.AndroidX.SavedState"
+	.asciz	"Xamarin.AndroidX.CustomView"
 	.size	map_aname.25, 28
 
 	.type	map_aname.26, %object
 map_aname.26:
-	.asciz	"Xamarin.AndroidX.Lifecycle.ViewModelSavedState"
-	.size	map_aname.26, 47
+	.asciz	"Xamarin.AndroidX.SavedState"
+	.size	map_aname.26, 28
 
 	.type	map_aname.27, %object
 map_aname.27:
-	.asciz	"Xamarin.AndroidX.Fragment"
-	.size	map_aname.27, 26
+	.asciz	"Xamarin.AndroidX.Lifecycle.ViewModelSavedState"
+	.size	map_aname.27, 47
 
 	.type	map_aname.28, %object
 map_aname.28:
-	.asciz	"Xamarin.AndroidX.Navigation.UI"
-	.size	map_aname.28, 31
+	.asciz	"Xamarin.AndroidX.Fragment"
+	.size	map_aname.28, 26
 
 	.type	map_aname.29, %object
 map_aname.29:
-	.asciz	"Xamarin.AndroidX.Navigation.Fragment"
-	.size	map_aname.29, 37
+	.asciz	"Xamarin.AndroidX.Navigation.UI"
+	.size	map_aname.29, 31
 
 	.type	map_aname.30, %object
 map_aname.30:
-	.asciz	"Xamarin.AndroidX.Navigation.Runtime"
-	.size	map_aname.30, 36
+	.asciz	"Xamarin.AndroidX.Navigation.Fragment"
+	.size	map_aname.30, 37
 
 	.type	map_aname.31, %object
 map_aname.31:
-	.asciz	"Xamarin.Google.Android.Material"
-	.size	map_aname.31, 32
+	.asciz	"Xamarin.AndroidX.Navigation.Runtime"
+	.size	map_aname.31, 36
 
 	.type	map_aname.32, %object
 map_aname.32:
-	.asciz	"TaskTracker"
-	.size	map_aname.32, 12
+	.asciz	"Xamarin.Google.Android.Material"
+	.size	map_aname.32, 32
 
 	.type	map_aname.33, %object
 map_aname.33:

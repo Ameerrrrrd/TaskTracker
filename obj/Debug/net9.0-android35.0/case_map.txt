@@ -1,0 +1,7 @@
+images\arrowright;images\arrowright
+images\edit;images\edit
+images\plus;images\plus
+images\tasksfordark;images\tasksfordark
+images\taskss;images\taskss
+images\trashcan;images\trashcan
+raw\aboutassets;raw\AboutAssets

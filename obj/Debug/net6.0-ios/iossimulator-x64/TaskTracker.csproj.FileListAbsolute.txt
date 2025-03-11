@@ -221,7 +221,6 @@ D:\.net maui\TaskTracker\bin\Debug\net6.0-ios\iossimulator-x64\libxamarin-dotnet
 D:\.net maui\TaskTracker\bin\Debug\net6.0-ios\iossimulator-x64\libxamarin-dotnet-debug.dylib
 D:\.net maui\TaskTracker\bin\Debug\net6.0-ios\iossimulator-x64\libxamarin-dotnet.a
 D:\.net maui\TaskTracker\bin\Debug\net6.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
-D:\.net maui\TaskTracker\obj\Debug\net6.0-ios\iossimulator-x64\build-signature\signature
 D:\.net maui\TaskTracker\obj\Debug\net6.0-ios\iossimulator-x64\mauiimage.inputs
 D:\.net maui\TaskTracker\obj\Debug\net6.0-ios\iossimulator-x64\mauifont.inputs
 D:\.net maui\TaskTracker\obj\Debug\net6.0-ios\iossimulator-x64\mauisplash.inputs

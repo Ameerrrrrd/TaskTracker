@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BundleResource Include="C:\Users\Desktop\Saved Games\Desktop\TaskTracker\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\trashcan.png" />
+    <BundleResource Include="C:\Users\Desktop\Saved Games\Desktop\TaskTracker\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\taskss.png" />
+    <BundleResource Include="C:\Users\Desktop\Saved Games\Desktop\TaskTracker\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\plus.png" />
+    <BundleResource Include="C:\Users\Desktop\Saved Games\Desktop\TaskTracker\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\edit.png" />
+    <BundleResource Include="C:\Users\Desktop\Saved Games\Desktop\TaskTracker\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\arrowright.png" />
+    <BundleResource Include="C:\Users\Desktop\Saved Games\Desktop\TaskTracker\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\tasksfordark.png" />
+    <BundleResource Include="C:\Users\Desktop\Saved Games\Desktop\TaskTracker\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\change_inf.png" />
+    <BundleResource Include="C:\Users\Desktop\Saved Games\Desktop\TaskTracker\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot@3x.png" />
+    <BundleResource Include="C:\Users\Desktop\Saved Games\Desktop\TaskTracker\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot@2x.png" />
+    <BundleResource Include="C:\Users\Desktop\Saved Games\Desktop\TaskTracker\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot.png" />
+    <BundleResource Include="obj\Release\net8.0-maccatalyst\resizetizer\f\OpenSans-Regular.ttf" />
+    <BundleResource Include="obj\Release\net8.0-maccatalyst\resizetizer\f\OpenSans-Semibold.ttf" />
+  </ItemGroup>
+</Project>

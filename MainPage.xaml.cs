@@ -21,6 +21,25 @@ public partial class MainPage : ContentPage
         Cancel.Clicked += CancelAddingTask;
 
         LoadTasksOnStartup();
+
+        MessagingCenter.Subscribe<AddonInfo, TaskModel>(this, "TaskUpdated", (sender, updatedTask) =>
+        {
+            // Найти задачу в коллекции по Id
+            var existingTask = Tasks.FirstOrDefault(t => t.Id == updatedTask.Id);
+            if (existingTask != null)
+            {
+                // Обновляем свойства задачи в коллекции
+                existingTask.Name = updatedTask.Name;
+                existingTask.Description = updatedTask.Description;
+                existingTask.Difficulty = updatedTask.Difficulty;
+                existingTask.Term = updatedTask.Term;
+
+                // Если TaskModel не реализует INotifyPropertyChanged, можно пересоздать источник данных:
+                // Обновляем ItemsSource для того, чтобы UI отобразил изменения
+                TasksCollectionView.ItemsSource = null;
+                TasksCollectionView.ItemsSource = Tasks;
+            }
+        });
     }
 
     private async void LoadTasksOnStartup()
@@ -29,23 +48,6 @@ public partial class MainPage : ContentPage
         foreach (var task in savedTasks)
         {
             Tasks.Add(task);
-        }
-    }
-
-    private async void OnDeleteSwipeItemInvoked(object sender, EventArgs e)
-    {
-        if (sender is SwipeItem swipeItem)
-        {
-            var task = (TaskModel)swipeItem.BindingContext;
-
-            bool confirmDelete = await DisplayAlert("Confirm Delete", "Are you sure you want to delete this task?", "Yes", "No");
-            if (confirmDelete)
-            {
-                await App.DataBase.DeleteTaskAsync(task);
-
-                TasksCollectionView.ItemsSource = await App.DataBase.GetTasksAsync();
-                Tasks.Remove(task);
-            }
         }
     }
 
@@ -58,9 +60,7 @@ public partial class MainPage : ContentPage
     private async void OnCloseContextMenu(object sender, EventArgs e)
     {
         if (string.IsNullOrEmpty(NamePlaceHolder.Text))
-        {
             await DisplayAlert("Error!", "Required fields are not filled in", "OK");
-        }
         else
         {
             var newTask = new TaskModel
@@ -89,21 +89,39 @@ public partial class MainPage : ContentPage
         }
     }
 
+    private async void OnDeleteSwipeItemInvoked(object sender, EventArgs e)
+    {
+        if (sender is SwipeItemView swipeItem)
+        {
+            var task = (TaskModel)swipeItem.BindingContext;
+
+            bool confirmDelete = await DisplayAlert("Confirm Delete", "Are you sure you want to delete this task?", "Yes", "No");
+            if (confirmDelete)
+            {
+                await App.DataBase.DeleteTaskAsync(task);
+
+                TasksCollectionView.ItemsSource = await App.DataBase.GetTasksAsync();
+                Tasks.Remove(task);
+            }
+        }
+    }
+
+    private async void OnEditSwipeInvoked(object sender, EventArgs e)
+    {
+        if (BindingContext is TaskModel selectedTask)
+            await Navigation.PushModalAsync(new AddonInfo(selectedTask));
+    }
+
     void CancelAddingTask(object sender, EventArgs e)
     {
         addTaskButton.IsVisible = true;
         PopupMenu.IsVisible = false;
     }
 
-
-
     private async void OnTaskTapped(object sender, EventArgs e)
     {
         if (sender is Label label && label.BindingContext is TaskModel selectedTask)
-        {
-            // Вместо DisplayAlert выполните переход на новую страницу, передав данные
             await Navigation.PushAsync(new AddonInfo(selectedTask));
-        }
     }
 
     protected override bool OnBackButtonPressed()
@@ -112,6 +130,7 @@ public partial class MainPage : ContentPage
         HandleBackButtonPress();
         return true; // Предотвращает стандартное действие "Назад"
     }
+
     private async void HandleBackButtonPress()
     {
         if (PopupMenu.IsVisible == false)
@@ -126,14 +145,11 @@ public partial class MainPage : ContentPage
             }
             else
                 await Navigation.PopAsync();
-
         }
         else
         {
             PopupMenu.IsVisible = false;
             addTaskButton.IsVisible = true;
         }
-
     }
-
 }

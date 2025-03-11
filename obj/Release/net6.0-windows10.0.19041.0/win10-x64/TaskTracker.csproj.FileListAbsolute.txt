@@ -366,3 +366,5 @@ D:\.net maui\TaskTracker\obj\Release\net6.0-windows10.0.19041.0\win10-x64\qualif
 D:\.net maui\TaskTracker\obj\Release\net6.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 D:\.net maui\TaskTracker\obj\Release\net6.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 D:\.net maui\TaskTracker\obj\Release\net6.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+D:\.net maui\TaskTracker\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\edit.scale-100.png
+D:\.net maui\TaskTracker\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\trashcan.scale-100.png

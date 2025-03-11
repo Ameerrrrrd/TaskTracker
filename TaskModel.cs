@@ -1,5 +1,4 @@
-﻿
-using SQLite;
+﻿using SQLite;
 using System.Threading.Tasks;
 
 namespace TaskTracker
@@ -16,7 +15,6 @@ namespace TaskTracker
         public override string ToString()
         {
             return $"{Name}";
-
         }        
         public string[] ret()
         {

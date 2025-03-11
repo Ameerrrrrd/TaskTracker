@@ -261,3 +261,7 @@ D:\.net maui\TaskTracker\obj\Release\net6.0-maccatalyst\maccatalyst-x64\refint\T
 D:\.net maui\TaskTracker\obj\Release\net6.0-maccatalyst\maccatalyst-x64\TaskTracker.pdb
 D:\.net maui\TaskTracker\obj\Release\net6.0-maccatalyst\maccatalyst-x64\TaskTracker.genruntimeconfig.cache
 D:\.net maui\TaskTracker\obj\Release\net6.0-maccatalyst\maccatalyst-x64\ref\TaskTracker.dll
+D:\.net maui\TaskTracker\obj\Release\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\edit.png
+D:\.net maui\TaskTracker\obj\Release\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\trashcan.png
+D:\.net maui\TaskTracker\obj\Release\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\arrowright.png
+D:\.net maui\TaskTracker\obj\Release\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\plus.png

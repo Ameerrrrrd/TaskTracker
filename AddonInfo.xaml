@@ -1,114 +1,333 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TaskTracker.AddonInfo"
              Title="AddonInfo">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+    <ContentPage.BackgroundColor>
+        <AppThemeBinding Light="WhiteSmoke" Dark="#212121" />
+    </ContentPage.BackgroundColor>
 
-        <ScrollView>
-        <VerticalStackLayout>
-            <Label 
-            Text="Task"
-            FontAttributes="Bold"
-            FontSize="26"
-            TextColor="Black"
-            Padding="10"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <AbsoluteLayout>
 
-            <BoxView HeightRequest="3"
-                     HorizontalOptions="Fill"
-                     Color="#4f9cc9" 
-                     Margin="-7"/>
-                <!--<ImageButton x:Name="editChanges"
-                     Source="edit.png" 
-                     WidthRequest="50" 
-                     HeightRequest="50" 
-                     BackgroundColor="Transparent"
-                     Margin="0,0,-280,0"
-                    />-->
-            <Label 
-            Text="Name:"
-            FontAttributes="Italic"
-            FontSize="22"
-            TextColor="Black"
-            Margin="10"
-            Padding="10" />
+        <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All">
+            <VerticalStackLayout>
 
-            <Frame CornerRadius="10"
-               BorderColor="#949494"
-               BackgroundColor="#f2f5f3"
-               HasShadow="True"
-               Padding="15"
-               Margin="5,-10,5,0"
-               VerticalOptions="Start"
-               WidthRequest="350"  >
+                <Label Text="Task"
+                       FontAttributes="Bold"
+                       FontSize="26"
+                       Padding="10"
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Center">
+                    <Label.TextColor>
+                        <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                    </Label.TextColor>
+                </Label>
 
-                <Label x:Name="AddonName" Text="" FontAttributes="Bold" FontSize="18"/>
-            </Frame>
+                <BoxView HeightRequest="3"
+                         HorizontalOptions="Fill"
+                         Margin="-7">
+                    <BoxView.Color>
+                        <AppThemeBinding Light="#86d195" Dark="#BB86FC"/>
+                    </BoxView.Color>
+                </BoxView>
 
-            <Label 
-            Text="Description:"
-            FontAttributes="Italic"
-            FontSize="22"
-            TextColor="Black"
-            Margin="10"
-            Padding="10"/>
+                <ImageButton x:Name="editChanges"
+                             Source="change_inf.png" 
+                             WidthRequest="55" 
+                             HeightRequest="50"
+                             CornerRadius="10"
+                             HorizontalOptions="End"
+                             Margin="0,20,30,-40"
+                             Clicked="OnEditChangesClicked">
+                    <ImageButton.BackgroundColor>
+                        <AppThemeBinding Light="#86d195" Dark="#BB86FC" />
+                    </ImageButton.BackgroundColor>
+                </ImageButton>
 
-            <Frame CornerRadius="10"
-               BorderColor="#949494"
-               BackgroundColor="#f2f5f3"
-               Padding="15"
-               Margin="5,-10,5,0"
-               VerticalOptions="Start"
-               WidthRequest="350"                
-                  >
-                <Label x:Name="AddonDescription" Text="" FontAttributes="Bold" FontSize="18" LineBreakMode="WordWrap" />
-            </Frame>
+                <Label Text="Name:"
+                       FontAttributes="Italic"
+                       FontSize="22"
+                       Margin="20, 30, 0, 10">
+                    <Label.TextColor>
+                        <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                    </Label.TextColor>
+                </Label>
+                <Frame CornerRadius="10"
+                       HasShadow="True"
+                       Padding="15"
+                       Margin="5,-10,5,0"
+                       VerticalOptions="Start"
+                       WidthRequest="350">
+                    <Frame.BackgroundColor>
+                        <AppThemeBinding Light="#f0faf2" Dark="#4f3b5e"/>
+                    </Frame.BackgroundColor>
+                    <Frame.BorderColor>
+                        <AppThemeBinding Light="#5e5e5e" Dark="#291f30"/>
+                    </Frame.BorderColor>
+                    <Label x:Name="AddonName" Text="" FontAttributes="Bold" FontSize="18"/>
+                </Frame>
 
-            <Label 
-            Text="Difficulty:"
-            FontAttributes="Italic"
-            FontSize="22"
-            TextColor="Black"
-            Margin="10"
-            Padding="10"/>
+                <Label Text="Description:"
+                       FontAttributes="Italic"
+                       FontSize="22"
+                       Margin="20, 30, 0, 10">
+                    <Label.TextColor>
+                        <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                    </Label.TextColor>
+                </Label>
+                <Frame CornerRadius="10"
+                       Padding="15"
+                       Margin="5,-10,5,0"
+                       VerticalOptions="Start"
+                       WidthRequest="350">
+                    <Frame.BackgroundColor>
+                        <AppThemeBinding Light="#f0faf2" Dark="#4f3b5e"/>
+                    </Frame.BackgroundColor>
+                    <Frame.BorderColor>
+                        <AppThemeBinding Light="#5e5e5e" Dark="#291f30"/>
+                    </Frame.BorderColor>
+                    <Label x:Name="AddonDescription" Text="" FontAttributes="Bold" FontSize="18" LineBreakMode="WordWrap" />
+                </Frame>
 
-            <Frame CornerRadius="10"
-               BorderColor="#949494"
-               BackgroundColor="#f2f5f3"
-               HasShadow="True"
-               Padding="15"
-               Margin="5,-10,5,0"
-               WidthRequest="350"  >
-                <Label x:Name="AddonDifficulty" Text="" FontAttributes="Bold" FontSize="18"/>
-            </Frame>
+                <Label Text="Difficulty:"
+                       FontAttributes="Italic"
+                       FontSize="22"
+                       Margin="20, 30, 0, 10">
+                    <Label.TextColor>
+                        <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                    </Label.TextColor>
+                </Label>
+                <Frame CornerRadius="10"
+                       HasShadow="True"
+                       Padding="15"
+                       Margin="5,-10,5,0"
+                       WidthRequest="350">
+                    <Frame.BackgroundColor>
+                        <AppThemeBinding Light="#f0faf2" Dark="#4f3e5e"/>
+                    </Frame.BackgroundColor>
+                    <Frame.BorderColor>
+                        <AppThemeBinding Light="#5e5e5e" Dark="#291f30"/>
+                    </Frame.BorderColor>
+                    <Label x:Name="AddonDifficulty" Text="" FontAttributes="Bold" FontSize="18"/>
+                </Frame>
 
-            <Label 
-            Text="Term:"
-            FontAttributes="Italic"
-            FontSize="22"
-            TextColor="Black"
-            Margin="10"
-            Padding="10"/>
-
-            <Frame CornerRadius="10"
-               BorderColor="#949494"
-               BackgroundColor="#f2f5f3"
-               HasShadow="True"
-               Padding="15"
-               Margin="5,-10,5,0"
-               WidthRequest="350"  >
-                <Label x:Name="AddonTerm" Text="" FontAttributes="Bold" FontSize="18"/>
-            </Frame>
-            
-            <Label/>
-            <Label/>
-        </VerticalStackLayout>
+                <Label Text="Term:"
+                       FontAttributes="Italic"
+                       FontSize="22"
+                       Margin="20, 30, 0, 10">
+                    <Label.TextColor>
+                        <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                    </Label.TextColor>
+                </Label>
+                <Frame CornerRadius="10"
+                       HasShadow="True"
+                       Padding="15"
+                       Margin="5,-10,5,0"
+                       WidthRequest="350">
+                    <Frame.BackgroundColor>
+                        <AppThemeBinding Light="#f0faf2" Dark="#4f3e5e"/>
+                    </Frame.BackgroundColor>
+                    <Frame.BorderColor>
+                        <AppThemeBinding Light="#5e5e5e" Dark="#291f30"/>
+                    </Frame.BorderColor>
+                    <Label x:Name="AddonTerm" Text="" FontAttributes="Bold" FontSize="18"/>
+                </Frame>
+            </VerticalStackLayout>
         </ScrollView>
-    </Grid>
+
+        <ContentView x:Name="PopupMenu2"
+                     IsVisible="False"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All">
+            <Frame Padding="10" CornerRadius="5">
+                <Frame.BackgroundColor>
+                    <AppThemeBinding Light="WhiteSmoke" Dark="#212121" />
+                </Frame.BackgroundColor>
+                <StackLayout>
+
+                    <Button x:Name="Cancel"
+                            Text="←"
+                            FontAttributes="Bold"
+                            FontSize="35"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            WidthRequest="70"
+                            HeightRequest="50"
+                            Padding="0"
+                            CornerRadius="80"
+                            Clicked="OnCancelClicked">
+                        <Button.BackgroundColor>
+                            <AppThemeBinding Light="#86d195" Dark="#BB86FC"/>
+                        </Button.BackgroundColor>
+                        <Button.TextColor>
+                            <AppThemeBinding Light="White" Dark="#F5F5F5"/>
+                        </Button.TextColor>
+                    </Button>
+
+                    <Label Text="Editing Task:"
+                           FontAttributes="Bold"
+                           FontSize="24" 
+                           HorizontalOptions="Center">
+                        <Label.TextColor>
+                            <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                        </Label.TextColor>
+                    </Label>
+
+                    <BoxView HeightRequest="3"
+                             HorizontalOptions="FillAndExpand"
+                             Margin="-10,2,-10,-10">
+                        <BoxView.Color>
+                            <AppThemeBinding Light="#86d195" Dark="#BB86FC"/>
+                        </BoxView.Color>
+                    </BoxView>
+
+                    <Label Text="Name:*"
+                           Margin="20, 30, 0, 10"
+                           FontAttributes="Italic"
+                           FontSize="18">
+                        <Label.TextColor>
+                            <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                        </Label.TextColor>
+                    </Label>
+                    <Frame CornerRadius="10"
+                           HasShadow="True"
+                           Padding="5">
+                        <Frame.BackgroundColor>
+                            <AppThemeBinding Light="#f0faf2" Dark="#4f3e5e"/>
+                        </Frame.BackgroundColor>
+                        <Frame.BorderColor>
+                            <AppThemeBinding Light="#5e5e5e" Dark="#291f30"/>
+                        </Frame.BorderColor>
+                        <Entry x:Name="NamePlaceHolder"
+                               Placeholder="Type a Task name"
+                               FontSize="16"
+                               Margin="1"
+                               MaxLength="25">
+                            <Entry.PlaceholderColor>
+                                <AppThemeBinding Light="#5e5e5e" Dark="#9E9E9E"/>
+                            </Entry.PlaceholderColor>
+                            <Entry.TextColor>
+                                <AppThemeBinding Light="Black" Dark="#F5F5F5"/>
+                            </Entry.TextColor>
+                        </Entry>
+                    </Frame>
+
+                    <Label Text="Description:"
+                           Margin="20, 30, 0, 10"
+                           FontAttributes="Italic"
+                           FontSize="18">
+                        <Label.TextColor>
+                            <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                        </Label.TextColor>
+                    </Label>
+                    <Frame CornerRadius="10"
+                           HasShadow="True"
+                           Padding="5">
+                        <Frame.BackgroundColor>
+                            <AppThemeBinding Light="#f0faf2" Dark="#4f3e5e"/>
+                        </Frame.BackgroundColor>
+                        <Frame.BorderColor>
+                            <AppThemeBinding Light="#5e5e5e" Dark="#291f30"/>
+                        </Frame.BorderColor>
+                        <Editor x:Name="DescriptionPlaceholder"
+                                Placeholder="Type a Task description"
+                                FontSize="16"
+                                AutoSize="TextChanges"
+                                HeightRequest="130"
+                                Margin="1">
+                            <Editor.PlaceholderColor>
+                                <AppThemeBinding Light="#5e5e5e" Dark="#9E9E9E"/>
+                            </Editor.PlaceholderColor>
+                            <Editor.TextColor>
+                                <AppThemeBinding Light="Black" Dark="#F5F5F5"/>
+                            </Editor.TextColor>
+                        </Editor>
+                    </Frame>
+
+                    <Label x:Name="difficultyHeader"
+                           Text="Choose task difficulty:"
+                           Margin="20, 30, 0, 10"
+                           FontAttributes="Italic"
+                           FontSize="18">
+                        <Label.TextColor>
+                            <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                        </Label.TextColor>
+                    </Label>
+                    <Frame CornerRadius="10"
+                           HasShadow="True"
+                           Padding="5">
+                        <Frame.BackgroundColor>
+                            <AppThemeBinding Light="#f0faf2" Dark="#4f3e5e"/>
+                        </Frame.BackgroundColor>
+                        <Frame.BorderColor>
+                            <AppThemeBinding Light="#5e5e5e" Dark="#291f30"/>
+                        </Frame.BorderColor>
+                        <Picker x:Name="difficultyPicker"
+                                Title="DIFFICULTY">
+                            <Picker.TitleColor>
+                                <AppThemeBinding Light="#5e5e5e" Dark="#9E9E9E"/>
+                            </Picker.TitleColor>
+                            <Picker.Items>
+                                <x:String>Easy</x:String>
+                                <x:String>Medium</x:String>
+                                <x:String>Hard</x:String>
+                                <x:String>Very Hard</x:String>
+                                <x:String>Impossible</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Frame>
+
+                    <Label x:Name="termHeader"
+                           Text="Choose task term:"
+                           Margin="20, 30, 0, 10"
+                           FontAttributes="Italic"
+                           FontSize="18">
+                        <Label.TextColor>
+                            <AppThemeBinding Light="black" Dark="#F5F5F5"/>
+                        </Label.TextColor>
+                    </Label>
+                    <Frame CornerRadius="10"
+                           HasShadow="True"
+                           Padding="5">
+                        <Frame.BackgroundColor>
+                            <AppThemeBinding Light="#f0faf2" Dark="#4f3e5e"/>
+                        </Frame.BackgroundColor>
+                        <Frame.BorderColor>
+                            <AppThemeBinding Light="#5e5e5e" Dark="#291f30"/>
+                        </Frame.BorderColor>
+                        <Picker x:Name="termPicker"
+                                Title="TERM">
+                            <Picker.TitleColor>
+                                <AppThemeBinding Light="#5e5e5e" Dark="#9E9E9E"/>
+                            </Picker.TitleColor>
+                            <Picker.Items>
+                                <x:String>Urgently</x:String>
+                                <x:String>Middle</x:String>
+                                <x:String>Not urgently</x:String>
+                                <x:String>Everyday</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Frame>
+
+                    <Button x:Name="ConfirmTask"
+                            Text="Add"
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            HorizontalOptions="End"
+                            WidthRequest="100"
+                            HeightRequest="50"
+                            Margin="0,20,0,0"
+                            CornerRadius="80"
+                            Clicked="OnConfirmTaskClicked">
+                        <Button.BackgroundColor>
+                            <AppThemeBinding Light="#86d195" Dark="#BB86FC"/>
+                        </Button.BackgroundColor>
+                        <Button.TextColor>
+                            <AppThemeBinding Light="White" Dark="#F5F5F5"/>
+                        </Button.TextColor>
+                    </Button>
+                </StackLayout>
+            </Frame>
+        </ContentView>
+    </AbsoluteLayout>
 </ContentPage>

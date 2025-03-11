@@ -229,7 +229,7 @@
 	.zero	3
 	.long	.L.compressed_assembly_data.39	@ data
 
-	.long	0x65400	@ uncompressed_file_size
+	.long	0x66800	@ uncompressed_file_size
 	.byte	0x0	@ loaded
 	.zero	3
 	.long	.L.compressed_assembly_data.40	@ data

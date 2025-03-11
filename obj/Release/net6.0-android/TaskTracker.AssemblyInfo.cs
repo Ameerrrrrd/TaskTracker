@@ -19,7 +19,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyTitleAttribute("TaskTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Android31.0")]
-[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Android21.0")]
+[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Android31.0")]
 
 // Создано классом WriteCodeFragment MSBuild.
 
